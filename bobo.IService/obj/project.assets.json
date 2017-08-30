@@ -689,11 +689,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\bobocms\\bobocms\\bobo.IService\\bobo.IService.csproj",
+      "projectUniqueName": "E:\\bobocms\\bobocms1\\bobo.IService\\bobo.IService.csproj",
       "projectName": "bobo.IService",
-      "projectPath": "E:\\bobocms\\bobocms\\bobo.IService\\bobo.IService.csproj",
+      "projectPath": "E:\\bobocms\\bobocms1\\bobo.IService\\bobo.IService.csproj",
       "packagesPath": "C:\\Users\\liao\\.nuget\\packages\\",
-      "outputPath": "E:\\bobocms\\bobocms\\bobo.IService\\obj\\",
+      "outputPath": "E:\\bobocms\\bobocms1\\bobo.IService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -714,8 +714,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\bobocms\\bobocms\\bobo.entity\\bobo.entity.csproj": {
-              "projectPath": "E:\\bobocms\\bobocms\\bobo.entity\\bobo.entity.csproj"
+            "E:\\bobocms\\bobocms1\\bobo.entity\\bobo.entity.csproj": {
+              "projectPath": "E:\\bobocms\\bobocms1\\bobo.entity\\bobo.entity.csproj"
             }
           }
         }

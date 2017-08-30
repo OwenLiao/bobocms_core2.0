@@ -12542,11 +12542,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\bobocms\\bobocms\\bobo.web\\bobo.web.csproj",
+      "projectUniqueName": "E:\\bobocms\\bobocms1\\bobo.web\\bobo.web.csproj",
       "projectName": "bobo.web",
-      "projectPath": "E:\\bobocms\\bobocms\\bobo.web\\bobo.web.csproj",
+      "projectPath": "E:\\bobocms\\bobocms1\\bobo.web\\bobo.web.csproj",
       "packagesPath": "C:\\Users\\liao\\.nuget\\packages\\",
-      "outputPath": "E:\\bobocms\\bobocms\\bobo.web\\obj\\",
+      "outputPath": "E:\\bobocms\\bobocms1\\bobo.web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

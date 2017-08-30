@@ -3002,11 +3002,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\bobocms\\bobocms\\bobo.Service\\bobo.Service.csproj",
+      "projectUniqueName": "E:\\bobocms\\bobocms1\\bobo.Service\\bobo.Service.csproj",
       "projectName": "bobo.Service",
-      "projectPath": "E:\\bobocms\\bobocms\\bobo.Service\\bobo.Service.csproj",
+      "projectPath": "E:\\bobocms\\bobocms1\\bobo.Service\\bobo.Service.csproj",
       "packagesPath": "C:\\Users\\liao\\.nuget\\packages\\",
-      "outputPath": "E:\\bobocms\\bobocms\\bobo.Service\\obj\\",
+      "outputPath": "E:\\bobocms\\bobocms1\\bobo.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3027,14 +3027,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\bobocms\\bobocms\\bobo.IService\\bobo.IService.csproj": {
-              "projectPath": "E:\\bobocms\\bobocms\\bobo.IService\\bobo.IService.csproj"
+            "E:\\bobocms\\bobocms1\\bobo.IService\\bobo.IService.csproj": {
+              "projectPath": "E:\\bobocms\\bobocms1\\bobo.IService\\bobo.IService.csproj"
             },
-            "E:\\bobocms\\bobocms\\bobo.orm.efcore\\bobo.orm.efcore.csproj": {
-              "projectPath": "E:\\bobocms\\bobocms\\bobo.orm.efcore\\bobo.orm.efcore.csproj"
+            "E:\\bobocms\\bobocms1\\bobo.orm.efcore\\bobo.orm.efcore.csproj": {
+              "projectPath": "E:\\bobocms\\bobocms1\\bobo.orm.efcore\\bobo.orm.efcore.csproj"
             },
-            "E:\\bobocms\\bobocms\\bobo.entity\\bobo.entity.csproj": {
-              "projectPath": "E:\\bobocms\\bobocms\\bobo.entity\\bobo.entity.csproj"
+            "E:\\bobocms\\bobocms1\\bobo.entity\\bobo.entity.csproj": {
+              "projectPath": "E:\\bobocms\\bobocms1\\bobo.entity\\bobo.entity.csproj"
             }
           }
         }
