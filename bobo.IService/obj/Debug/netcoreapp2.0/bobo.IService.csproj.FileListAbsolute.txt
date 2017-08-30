@@ -1,0 +1,11 @@
+E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.IService.deps.json
+E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.IService.dll
+E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.IService.pdb
+E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.csprojResolveAssemblyReference.cache
+E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.csproj.CoreCompileInputs.cache
+E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.AssemblyInfoInputs.cache
+E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.AssemblyInfo.cs
+E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.dll
+E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.pdb
+E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.entity.dll
+E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.entity.pdb
