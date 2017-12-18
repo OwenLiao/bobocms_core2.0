@@ -9,3 +9,9 @@ E:\bobocms\bobocms\bobo.web\obj\Debug\netcoreapp2.0\bobo.web.AssemblyInfoInputs.
 E:\bobocms\bobocms\bobo.web\obj\Debug\netcoreapp2.0\bobo.web.AssemblyInfo.cs
 E:\bobocms\bobocms\bobo.web\obj\Debug\netcoreapp2.0\bobo.web.dll
 E:\bobocms\bobocms\bobo.web\obj\Debug\netcoreapp2.0\bobo.web.pdb
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.entity.dll
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.IService.dll
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.orm.efcore.dll
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.IService.pdb
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.entity.pdb
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.orm.efcore.pdb

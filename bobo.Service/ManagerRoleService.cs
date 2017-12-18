@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Model;
 using System.Linq;
+using bobo.entity;
+using IService;
 
 namespace DAL
 {

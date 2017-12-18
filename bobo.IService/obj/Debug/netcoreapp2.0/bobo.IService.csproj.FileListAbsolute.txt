@@ -9,3 +9,5 @@ E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.dll
 E:\bobocms\bobocms\bobo.IService\obj\Debug\netcoreapp2.0\bobo.IService.pdb
 E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.entity.dll
 E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.entity.pdb
+E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.orm.efcore.dll
+E:\bobocms\bobocms\bobo.IService\bin\Debug\netcoreapp2.0\bobo.orm.efcore.pdb

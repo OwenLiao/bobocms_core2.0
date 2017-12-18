@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\bobo.entity\bobo.entity.csproj" />
+    <ProjectReference Include="..\bobo.orm.efcore\bobo.orm.efcore.csproj" />
   </ItemGroup>
 
 </Project>
