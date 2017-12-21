@@ -3,7 +3,7 @@ using bobo.entity;
 using bobo.IService;
 using System.Collections.Generic;
 
-namespace IService
+namespace bobo.IService
 {
     public interface ICategoryService : IBaseService<Category> { }
 

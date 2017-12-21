@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using bobo.entity;
-using IService;
+using bobo.IService;
+using bobo.orm.efcore;
 
 namespace DAL
 {

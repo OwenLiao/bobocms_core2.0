@@ -16,7 +16,6 @@ namespace bobo.orm.efcore
     /// 仓储基类
     /// </summary>
     public class BaseRepository<T> where T : class, new()
-        //  public  class BaseRepository<T>  where T : class
     {
         protected MyDbContext nContext;
         public BaseRepository(MyDbContext _context)

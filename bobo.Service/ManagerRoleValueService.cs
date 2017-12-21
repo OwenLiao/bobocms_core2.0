@@ -1,6 +1,7 @@
 ﻿
 using bobo.entity;
-using IService;
+using bobo.orm.efcore;
+using bobo.IService;
 using System;
 using System.Collections.Generic;
 using System.Text;

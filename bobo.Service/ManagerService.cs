@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Model;
+using bobo.entity;
 using System.Linq;
-using Common;
+using bobo.orm.efcore;
+using bobo.IService;
 
 namespace DAL
 {
@@ -55,11 +56,11 @@ namespace DAL
             }
             else
             {
-                var mrvs = manager.ManagerRole.ManagerRoleValues.Where(q => q.ActionType == MyEnums.ActionEnum.View.ToString());
-                foreach (var item in mrvs)
-                {
-                    channels.Add(item.SysChannel);
-                }
+                //var mrvs = manager.ManagerRole.ManagerRoleValues.Where(q => q.ActionType == MyEnums.ActionEnum.View.ToString());
+                //foreach (var item in mrvs)
+                //{
+                //    channels.Add(item.SysChannel);
+                //}
             }
             return channels;
 

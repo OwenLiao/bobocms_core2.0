@@ -42,11 +42,11 @@ namespace bobo.orm.efcore
 
         public DbSet<Category> Category { get; set; }
         public DbSet<Article> Article { get; set; }
-        public DbSet<Manager> Manager { get; set; }
-        public DbSet<ManagerLog> ManagerLog { get; set; }
+        //public DbSet<Manager> Manager { get; set; }
+        //public DbSet<ManagerLog> ManagerLog { get; set; }
 
-        public DbSet<ManagerRole> ManagerRole { get; set; }
-        public DbSet<ManagerRoleValue> ManagerRoleValue { get; set; }
-        public DbSet<SysChannel> SysChannel { get; set; }
+        //public DbSet<ManagerRole> ManagerRole { get; set; }
+        //public DbSet<ManagerRoleValue> ManagerRoleValue { get; set; }
+        //public DbSet<SysChannel> SysChannel { get; set; }
     }
 }

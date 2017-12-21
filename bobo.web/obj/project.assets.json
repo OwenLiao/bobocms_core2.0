@@ -2,6 +2,94 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "Autofac/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.AspNetCore.Multitenant/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "4.1.0",
+          "Autofac.Multitenant": "4.0.0",
+          "Microsoft.AspNetCore.Hosting": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Autofac.Integration.AspNetCore.Multitenant.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Autofac.Integration.AspNetCore.Multitenant.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Autofac.Multitenant/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Multitenant.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Multitenant.dll": {}
+        }
+      },
+      "AutofacContrib.DynamicProxy/2.3.2.632": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "2.6.3.862",
+          "Castle.Core": "3.1.0"
+        },
+        "compile": {
+          "lib/net40/AutofacContrib.DynamicProxy.dll": {}
+        },
+        "runtime": {
+          "lib/net40/AutofacContrib.DynamicProxy.dll": {}
+        }
+      },
+      "Castle.Core/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -3496,6 +3584,33 @@
           "ref/netstandard1.0/System.Diagnostics.Tools.dll": {}
         }
       },
+      "System.Diagnostics.TraceSource/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Diagnostics.Tracing/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4894,10 +5009,100 @@
         "runtime": {
           "bin/placeholder/bobo.orm.efcore.dll": {}
         }
+      },
+      "bobo.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Autofac": "4.6.2",
+          "bobo.IService": "1.0.0",
+          "bobo.entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/bobo.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/bobo.Service.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/4.6.2": {
+      "sha512": "wKI7F6+n45gqfq0T8FuB3hFzaCkuegiFo5in6uB1y2Ai9ZYcjue8yqk3yzyNEwBDS7AyvlTUGSoNovwpUuKqTw==",
+      "type": "package",
+      "path": "autofac/4.6.2",
+      "files": [
+        "autofac.4.6.2.nupkg.sha512",
+        "autofac.nuspec",
+        "lib/net45/Autofac.dll",
+        "lib/net45/Autofac.xml",
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.xml"
+      ]
+    },
+    "Autofac.AspNetCore.Multitenant/1.0.0": {
+      "sha512": "AoWyYU0x7N3sJjBbvUW8M2VviSG6KuwkNfSByrxvsW0UW0ou1tkSwDwJwVF+XVRo8w/jE3h9OpPytWwiJlIrRQ==",
+      "type": "package",
+      "path": "autofac.aspnetcore.multitenant/1.0.0",
+      "files": [
+        "autofac.aspnetcore.multitenant.1.0.0.nupkg.sha512",
+        "autofac.aspnetcore.multitenant.nuspec",
+        "lib/netstandard1.3/Autofac.Integration.AspNetCore.Multitenant.dll",
+        "lib/netstandard1.3/Autofac.Integration.AspNetCore.Multitenant.xml"
+      ]
+    },
+    "Autofac.Extensions.DependencyInjection/4.1.0": {
+      "sha512": "Gp94QkDxBLHaP8RnUWvtpIgOTVfIbw/wtxoV0YscI6iADQCFWn57jLYDuJnTSuZ75a6+MIXFEP2jbbTOnU01GQ==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/4.1.0",
+      "files": [
+        "autofac.extensions.dependencyinjection.4.1.0.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
+    "Autofac.Multitenant/4.0.0": {
+      "sha512": "4orsCn1SawNLApzXUMEYNVtjdwVcsPTb1NO38xiMBZ0Cb89Ctr0J4Gu+pJ8P+tKhAsh557SfJWsduFW+G01lyw==",
+      "type": "package",
+      "path": "autofac.multitenant/4.0.0",
+      "files": [
+        "autofac.multitenant.4.0.0.nupkg.sha512",
+        "autofac.multitenant.nuspec",
+        "lib/net451/Autofac.Multitenant.dll",
+        "lib/net451/Autofac.Multitenant.xml",
+        "lib/netstandard1.1/Autofac.Multitenant.dll",
+        "lib/netstandard1.1/Autofac.Multitenant.xml"
+      ]
+    },
+    "AutofacContrib.DynamicProxy/2.3.2.632": {
+      "sha512": "DZzR4zF0wGfHOsjOW6QMvycxHLAfWzXG7olC5zN0kESQjJUkml+cWBkZzBjAw+dYNAdi6LDeRCmw7UDnf1jzyg==",
+      "type": "package",
+      "path": "autofaccontrib.dynamicproxy/2.3.2.632",
+      "files": [
+        "autofaccontrib.dynamicproxy.2.3.2.632.nupkg.sha512",
+        "autofaccontrib.dynamicproxy.nuspec",
+        "lib/net40/AutofacContrib.DynamicProxy.dll"
+      ]
+    },
+    "Castle.Core/4.2.0": {
+      "sha512": "1TtKHYYVfox7aUZ0akCqkULmAjpG8X5ZRzTzTiONY34xtvvaPuUSSdVL1VaF/1/ljRhOkpy+uKOGn6XoFGvorw==",
+      "type": "package",
+      "path": "castle.core/4.2.0",
+      "files": [
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle.core.4.2.0.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net35/Castle.Core.dll",
+        "lib/net40/Castle.Core.dll",
+        "lib/net45/Castle.Core.dll",
+        "lib/netstandard1.3/Castle.Core.dll",
+        "readme.txt"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -9176,6 +9381,45 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "System.Diagnostics.TraceSource/4.3.0": {
+      "sha512": "VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
+      "type": "package",
+      "path": "system.diagnostics.tracesource/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.TraceSource.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.TraceSource.dll",
+        "ref/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "ref/netstandard1.3/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.TraceSource.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.TraceSource.dll",
+        "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "system.diagnostics.tracesource.4.3.0.nupkg.sha512",
+        "system.diagnostics.tracesource.nuspec"
+      ]
+    },
     "System.Diagnostics.Tracing/4.3.0": {
       "sha512": "rswfv0f/Cqkh78rA5S8eN8Neocz234+emGCtTF3lxPY96F+mmmUen6tbn0glN6PMvlKQb9bPAY5e9u7fgPTkKw==",
       "type": "package",
@@ -12825,14 +13069,24 @@
       "type": "project",
       "path": "../bobo.orm.efcore/bobo.orm.efcore.csproj",
       "msbuildProject": "../bobo.orm.efcore/bobo.orm.efcore.csproj"
+    },
+    "bobo.Service/1.0.0": {
+      "type": "project",
+      "path": "../bobo.Service/bobo.Service.csproj",
+      "msbuildProject": "../bobo.Service/bobo.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Autofac >= 4.6.2",
+      "Autofac.AspNetCore.Multitenant >= 1.0.0",
+      "AutofacContrib.DynamicProxy >= 2.3.2.632",
+      "Castle.Core >= 4.2.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 2.0.0.1",
-      "bobo.IService >= 1.0.0"
+      "bobo.IService >= 1.0.0",
+      "bobo.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12872,6 +13126,9 @@
           "projectReferences": {
             "E:\\bobocms\\bobocms\\bobo.IService\\bobo.IService.csproj": {
               "projectPath": "E:\\bobocms\\bobocms\\bobo.IService\\bobo.IService.csproj"
+            },
+            "E:\\bobocms\\bobocms\\bobo.Service\\bobo.Service.csproj": {
+              "projectPath": "E:\\bobocms\\bobocms\\bobo.Service\\bobo.Service.csproj"
             }
           }
         }
@@ -12889,14 +13146,30 @@
             "target": "Package",
             "version": "2.0.0.1"
           },
+          "AutofacContrib.DynamicProxy": {
+            "target": "Package",
+            "version": "2.3.2.632"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "2.0",
             "autoReferenced": true
           },
+          "Autofac.AspNetCore.Multitenant": {
+            "target": "Package",
+            "version": "1.0.0"
+          },
+          "Castle.Core": {
+            "target": "Package",
+            "version": "4.2.0"
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "2.0.0"
+          },
+          "Autofac": {
+            "target": "Package",
+            "version": "4.6.2"
           }
         },
         "imports": [
@@ -12906,5 +13179,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETCoreApp,Version=v2.0”还原包“AutofacContrib.DynamicProxy 2.3.2.632”。此包可能与项目不完全兼容。",
+      "libraryId": "AutofacContrib.DynamicProxy",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

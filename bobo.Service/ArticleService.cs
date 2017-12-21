@@ -1,12 +1,12 @@
 ﻿using bobo.entity;
 using bobo.orm.efcore;
-using IService;
+using bobo.IService;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 
-namespace DAL
+namespace bobo.Service
 {
     public class ArticleService : BaseRepository<Article>, IArticleService
     {

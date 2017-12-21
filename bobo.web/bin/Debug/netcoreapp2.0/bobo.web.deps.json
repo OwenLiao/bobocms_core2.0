@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "a5e76f64a1037735d6e7302835cf71ea22870ff7"
+    "signature": "e349678228cf3bba3f74b45e575e34f6b89d9858"
   },
   "compilationOptions": {
     "defines": [
@@ -23,16 +23,103 @@
     ".NETCoreApp,Version=v2.0": {
       "bobo.web/1.0.0": {
         "dependencies": {
+          "Autofac": "4.6.2",
+          "Autofac.AspNetCore.Multitenant": "1.0.0",
+          "AutofacContrib.DynamicProxy": "2.3.2.632",
+          "Castle.Core": "4.2.0",
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "2.0.0.1",
-          "bobo.IService": "1.0.0"
+          "bobo.IService": "1.0.0",
+          "bobo.Service": "1.0.0"
         },
         "runtime": {
           "bobo.web.dll": {}
         },
         "compile": {
           "bobo.web.dll": {}
+        }
+      },
+      "Autofac/4.6.2": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "System.ComponentModel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.AspNetCore.Multitenant/1.0.0": {
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "4.1.0",
+          "Autofac.Multitenant": "4.0.0",
+          "Microsoft.AspNetCore.Hosting": "2.0.0",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Autofac.Integration.AspNetCore.Multitenant.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Autofac.Integration.AspNetCore.Multitenant.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.1.0": {
+        "dependencies": {
+          "Autofac": "4.6.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Autofac.Multitenant/4.0.0": {
+        "dependencies": {
+          "Autofac": "4.6.2"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Multitenant.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Multitenant.dll": {}
+        }
+      },
+      "AutofacContrib.DynamicProxy/2.3.2.632": {
+        "dependencies": {
+          "Autofac": "4.6.2",
+          "Castle.Core": "4.2.0"
+        },
+        "runtime": {
+          "lib/net40/AutofacContrib.DynamicProxy.dll": {}
+        },
+        "compile": {
+          "lib/net40/AutofacContrib.DynamicProxy.dll": {}
+        }
+      },
+      "Castle.Core/4.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -2915,6 +3002,29 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Diagnostics.TraceSource/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
       "System.Diagnostics.Tracing/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -3924,6 +4034,19 @@
           "bobo.orm.efcore.dll": {}
         }
       },
+      "bobo.Service/1.0.0": {
+        "dependencies": {
+          "Autofac": "4.6.2",
+          "bobo.IService": "1.0.0",
+          "bobo.entity": "1.0.0"
+        },
+        "runtime": {
+          "bobo.Service.dll": {}
+        },
+        "compile": {
+          "bobo.Service.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.0.0": {
         "dependencies": {
           "Microsoft.NETCore.DotNetHostPolicy": "2.0.0",
@@ -4107,6 +4230,48 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/4.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wKI7F6+n45gqfq0T8FuB3hFzaCkuegiFo5in6uB1y2Ai9ZYcjue8yqk3yzyNEwBDS7AyvlTUGSoNovwpUuKqTw==",
+      "path": "autofac/4.6.2",
+      "hashPath": "autofac.4.6.2.nupkg.sha512"
+    },
+    "Autofac.AspNetCore.Multitenant/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AoWyYU0x7N3sJjBbvUW8M2VviSG6KuwkNfSByrxvsW0UW0ou1tkSwDwJwVF+XVRo8w/jE3h9OpPytWwiJlIrRQ==",
+      "path": "autofac.aspnetcore.multitenant/1.0.0",
+      "hashPath": "autofac.aspnetcore.multitenant.1.0.0.nupkg.sha512"
+    },
+    "Autofac.Extensions.DependencyInjection/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gp94QkDxBLHaP8RnUWvtpIgOTVfIbw/wtxoV0YscI6iADQCFWn57jLYDuJnTSuZ75a6+MIXFEP2jbbTOnU01GQ==",
+      "path": "autofac.extensions.dependencyinjection/4.1.0",
+      "hashPath": "autofac.extensions.dependencyinjection.4.1.0.nupkg.sha512"
+    },
+    "Autofac.Multitenant/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4orsCn1SawNLApzXUMEYNVtjdwVcsPTb1NO38xiMBZ0Cb89Ctr0J4Gu+pJ8P+tKhAsh557SfJWsduFW+G01lyw==",
+      "path": "autofac.multitenant/4.0.0",
+      "hashPath": "autofac.multitenant.4.0.0.nupkg.sha512"
+    },
+    "AutofacContrib.DynamicProxy/2.3.2.632": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DZzR4zF0wGfHOsjOW6QMvycxHLAfWzXG7olC5zN0kESQjJUkml+cWBkZzBjAw+dYNAdi6LDeRCmw7UDnf1jzyg==",
+      "path": "autofaccontrib.dynamicproxy/2.3.2.632",
+      "hashPath": "autofaccontrib.dynamicproxy.2.3.2.632.nupkg.sha512"
+    },
+    "Castle.Core/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1TtKHYYVfox7aUZ0akCqkULmAjpG8X5ZRzTzTiONY34xtvvaPuUSSdVL1VaF/1/ljRhOkpy+uKOGn6XoFGvorw==",
+      "path": "castle.core/4.2.0",
+      "hashPath": "castle.core.4.2.0.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
@@ -5627,6 +5792,13 @@
       "path": "system.diagnostics.tools/4.3.0",
       "hashPath": "system.diagnostics.tools.4.3.0.nupkg.sha512"
     },
+    "System.Diagnostics.TraceSource/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
+      "path": "system.diagnostics.tracesource/4.3.0",
+      "hashPath": "system.diagnostics.tracesource.4.3.0.nupkg.sha512"
+    },
     "System.Diagnostics.Tracing/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -6156,6 +6328,11 @@
       "sha512": ""
     },
     "bobo.orm.efcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "bobo.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

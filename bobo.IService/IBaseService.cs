@@ -12,12 +12,9 @@ namespace bobo.IService
     /// 接口基类
     /// </summary>
     /// <typeparam name="T">类型</typeparam>
-    public interface IBaseService<T> where T:class,new()
+    public interface IBaseService<T> where T:class,new ()
     {
-        /// <summary>
-        /// 数据实体列表
-        /// </summary>
-        IQueryable<T> Entities { get; }
+
 
         /// <summary>
         /// 添加实体

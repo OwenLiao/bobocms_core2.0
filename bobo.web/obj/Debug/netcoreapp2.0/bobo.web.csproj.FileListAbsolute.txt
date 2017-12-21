@@ -15,3 +15,5 @@ E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.orm.efcore.dll
 E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.IService.pdb
 E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.entity.pdb
 E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.orm.efcore.pdb
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.Service.dll
+E:\bobocms\bobocms\bobo.web\bin\Debug\netcoreapp2.0\bobo.Service.pdb

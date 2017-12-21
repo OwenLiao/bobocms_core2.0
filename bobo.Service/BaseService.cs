@@ -2,76 +2,84 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using Autofac;
+using bobo.orm.efcore;
 
 namespace bobo.Service
 {
-    public class BaseService : IBaseService<T> 
+    public class BaseService<T> : IBaseService<T> where T : class, new()
     {
-        public System.Linq.IQueryable<T> Entities => throw new NotImplementedException();
+
+        BaseRepository<T> rep { get; }
+
+
+
+
 
         public T Add(T entity, bool isSave = true)
         {
-            throw new NotImplementedException();
+           return rep.Add(entity, isSave);
         }
 
         public int Count(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return rep.Count(predicate);
         }
 
         public bool Delete(T entity, bool isSave = true)
         {
-            throw new NotImplementedException();
+            return rep.Delete(entity, isSave);
         }
 
         public bool Delete(int id, bool isSave = true)
         {
-            throw new NotImplementedException();
+            return rep.Delete(id, isSave);
         }
 
         public bool Exist(System.Linq.Expressions.Expression<Func<T, bool>> anyLambda)
         {
-            throw new NotImplementedException();
+            return rep.Exist(anyLambda);
         }
 
         public System.Linq.IQueryable<T> GetList(System.Linq.Expressions.Expression<Func<T, bool>> whereLamdba)
         {
-            throw new NotImplementedException();
+            return rep.GetList(whereLamdba);
         }
 
         public System.Linq.IQueryable<T> GetList(System.Linq.Expressions.Expression<Func<T, bool>> whereLamdba, string orderName, bool isAsc)
         {
-            throw new NotImplementedException();
+            return rep.GetList(whereLamdba,orderName,isAsc);
         }
 
         public System.Linq.IQueryable<T> GetList(int top, System.Linq.Expressions.Expression<Func<T, bool>> whereLamdba, string orderName, bool isAsc)
         {
-            throw new NotImplementedException();
+            return rep.GetList(top,whereLamdba, orderName, isAsc);
         }
 
         public System.Linq.IQueryable<T> GetList(int pageSize, int pageIndex, System.Linq.Expressions.Expression<Func<T, bool>> whereLamdba, string orderName, bool isAsc, out int totalRecord)
         {
-            throw new NotImplementedException();
+            return rep.GetList(pageSize,pageIndex, whereLamdba, orderName, isAsc,out totalRecord);
         }
 
         public T GetModel(int Id)
         {
-            throw new NotImplementedException();
+            return rep.GetModel(Id);
         }
 
         public T GetModel(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda)
         {
-            throw new NotImplementedException();
+            return rep.GetModel(whereLambda);
         }
 
         public int Save()
         {
-            throw new NotImplementedException();
+            return rep.Save();
         }
 
         public bool Update(T entity, bool isSave = true)
         {
-            throw new NotImplementedException();
+           return rep.Update(entity, isSave);
         }
     }
 }
