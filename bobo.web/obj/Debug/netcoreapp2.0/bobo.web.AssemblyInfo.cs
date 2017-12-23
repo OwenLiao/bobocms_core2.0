@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("bobo.web")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Bobo.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("bobo.web")]
-[assembly: System.Reflection.AssemblyTitleAttribute("bobo.web")]
+[assembly: System.Reflection.AssemblyProductAttribute("Bobo.Web")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Bobo.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

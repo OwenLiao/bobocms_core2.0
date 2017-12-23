@@ -9,8 +9,7 @@ namespace bobo.Service
 {
     public class CategoryService : BaseRepository<Category>,ICategoryService,IDependency
     {
-        public CategoryService(MyDbContext context)
-            : base(context)
+        public CategoryService(MyDbContext context):base(context)
         { }
     }
 }
