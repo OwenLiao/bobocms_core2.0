@@ -15,14 +15,16 @@ namespace bobo.orm.efcore
     /// <summary>
     /// 仓储基类
     /// </summary>
-    public class BaseRepository<T> where T : class, new()
+    public class BaseRepository<T> where T : class
     {
-        protected MyDbContext nContext;
-        public BaseRepository(MyDbContext _context)
-        {
-            nContext = _context;
-        }
+        // MyDbContext nContext =ContextFactory.GetCurrentContext();
+        //定义数据访问上下文对象
+        protected readonly MyDbContext nContext;
 
+        public BaseRepository(MyDbContext _nContext)
+        {
+            nContext = _nContext;
+        }
         public IQueryable<T> Entities
         {
             get { return nContext.Set<T>(); }

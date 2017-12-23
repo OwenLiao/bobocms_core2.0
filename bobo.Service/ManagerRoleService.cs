@@ -5,14 +5,13 @@ using System.Linq;
 using bobo.entity;
 using bobo.IService;
 using bobo.orm.efcore;
+using bobo.Service;
 
 namespace DAL
 {
-    public class ManagerRoleService : BaseRepository<ManagerRole>, IManagerRoleService
+    public class ManagerRoleService : BaseService<ManagerRole>, IManagerRoleService
     {
-        public ManagerRoleService(MyDbContext context)
-            : base(context)
-       { }
+      
 
 
         /// <summary>

@@ -5,13 +5,12 @@ using bobo.IService;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using bobo.Service;
 
 namespace DAL
 {
-   public class ManagerRoleValueService : BaseRepository<ManagerRoleValue>, IManagerRoleValueService
+   public class ManagerRoleValueService : BaseService<ManagerRoleValue>, IManagerRoleValueService
     {
-        public ManagerRoleValueService(MyDbContext context)
-            : base(context)
-       { }
+
     }
 }

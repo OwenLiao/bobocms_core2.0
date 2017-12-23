@@ -11,11 +11,21 @@ namespace bobo.Service
     public class BaseService<T> : IBaseService<T> where T : class, new()
     {
 
-        BaseRepository<T> rep { get; }
+        // BaseRepository<T> rep= BaseRepositoryFactory<T>.GetCurrentBaseRepository();
 
 
 
 
+        BaseRepository<T> rep;
+        public BaseService(BaseRepository<T> _rep)
+        {
+            rep = _rep;
+        }
+
+        public BaseService()
+        {
+       
+        }
 
         public T Add(T entity, bool isSave = true)
         {

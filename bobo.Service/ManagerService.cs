@@ -6,14 +6,13 @@ using System.Linq;
 using bobo.orm.efcore;
 using bobo.IService;
 
-namespace DAL
+namespace bobo.Service
 {
-    public class ManagerService : BaseRepository<Manager>, IManagerService
+    public class ManagerService : BaseService<Manager>, IManagerService
     {
         ISysChannelService bllSys;
         IManagerRoleService bllManRol;
         public ManagerService(MyDbContext context, ISysChannelService _bllSys, IManagerRoleService _bllManRol)
-            : base(context)
        {
 
             bllSys = _bllSys;

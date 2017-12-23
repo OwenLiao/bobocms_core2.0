@@ -5,12 +5,10 @@ using bobo.entity;
 using bobo.orm.efcore;
 using bobo.IService;
 
-namespace DAL
+namespace bobo.Service
 {
-    public class SysChannelService : BaseRepository<SysChannel>, ISysChannelService
+    public class SysChannelService : BaseService<SysChannel>, ISysChannelService
     {
-        public SysChannelService(MyDbContext context)
-            : base(context)
-       { }
+
     }
 }

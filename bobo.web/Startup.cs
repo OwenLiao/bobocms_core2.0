@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,26 +6,28 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using bobo.orm.efcore;
-using Autofac.Multitenant;
-using Autofac;
-using bobo.Service;
-using bobo.IService;
-using Autofac.Extensions.DependencyInjection;
 using System.Reflection;
+using Autofac;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
-using Castle.DynamicProxy;
+using bobo.IService;
+using Autofac.Extensions.DependencyInjection;
 using AutofacContrib.DynamicProxy;
+using Castle.DynamicProxy;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using bobo.orm.efcore;
+using Microsoft.EntityFrameworkCore;
+using bobo.Service;
+using AutofacDemo.Codes;
 
-namespace bobo.web
+namespace BoboWeb
 {
     public class Startup
     {
 
 
-        #region Autofacע��
+
+        #region Autofac注册
 
         public class AopInterceptor : IInterceptor
         {
@@ -38,12 +40,18 @@ namespace bobo.web
 
         private IServiceProvider RegisterAutofac(IServiceCollection services)
         {
-            // var assembly = this.GetType().GetTypeInfo().Assembly;
-            Assembly assembly = Assembly.Load(new AssemblyName("bobo.Service"));
+            var assembly1 = this.GetType().GetTypeInfo().Assembly;
+            var assembly2 = Assembly.Load(new AssemblyName("bobo.Service"));
+            List<Assembly> assemblies = new List<Assembly>();
+            assemblies.Add(assembly1);
+            assemblies.Add(assembly2);
+
+
+
             var builder = new ContainerBuilder();
             var manager = new ApplicationPartManager();
 
-            manager.ApplicationParts.Add(new AssemblyPart(assembly));
+            manager.ApplicationParts.Add(new AssemblyPart(assembly1));
             manager.FeatureProviders.Add(new ControllerFeatureProvider());
 
             var feature = new ControllerFeature();
@@ -58,7 +66,8 @@ namespace bobo.web
 
             builder.RegisterType<AopInterceptor>();
 
-            builder.RegisterAssemblyTypes(assembly)
+
+            builder.RegisterAssemblyTypes(assembly1, assembly2)
                   .Where(type =>
                          typeof(IDependency).IsAssignableFrom(type) && !type.GetTypeInfo().IsAbstract)
                   .AsImplementedInterfaces()
@@ -68,10 +77,12 @@ namespace bobo.web
 
             this.ApplicationContainer = builder.Build();
 
+
             return new AutofacServiceProvider(this.ApplicationContainer);
         }
 
         #endregion
+
 
 
         public Startup(IConfiguration configuration)
@@ -81,15 +92,49 @@ namespace bobo.web
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public IServiceProvider ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
-            services.AddDbContext<MyDbContext>(options =>
-                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+        #region autofac 注入容器
 
-            return RegisterAutofac(services);
+
+
+        /// <summary>
+        /// 这里修改了ConfigureServices函数，加入返回值IServiceProvider，返回Autofac的ServiceProvider
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        //public IServiceProvider ConfigureServices(IServiceCollection services)
+        //{
+        //    // Add framework services.
+        //    services.AddApplicationInsightsTelemetry(Configuration);
+        //    services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
+
+        //    services.AddMvc();
+        //    services.AddDbContext<MyDbContext>(options =>
+        //       options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+
+
+        //    return RegisterAutofac(services);
+        //}
+        #endregion
+
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+
+            // Add framework services.
+            services.AddMvc();
+
+            services.AddDbContext<MyDbContext>(options =>
+                  options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+            // Register application services.
+            // services.AddScoped<ICharacterRepository, CharacterRepository>();
+            // services.AddTransient<IOperationTransient, Operation>();
+            // services.AddSingleton<IOperationSingleton, Operation>();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IUserManager, UserManager>();
+
+
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -101,7 +146,7 @@ namespace bobo.web
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseStaticFiles();
@@ -110,7 +155,7 @@ namespace bobo.web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

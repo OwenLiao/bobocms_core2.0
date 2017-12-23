@@ -8,11 +8,9 @@ using System.Text;
 
 namespace bobo.Service
 {
-    public class ArticleService : BaseRepository<Article>, IArticleService
+    public class ArticleService : BaseService<Article>, IArticleService
     {
-        public ArticleService(MyDbContext context)
-            : base(context)
-       { }
+       
 
     }
 
