@@ -71,6 +71,9 @@ namespace bobo.entity
         [Display(Name = "״̬")]
         public Nullable<int> IsLock { get; set; }
 
+
+        public Nullable<int> IsDeleted { get; set; }
+
         /// <summary>
         ///
         /// </summary>
@@ -78,6 +81,6 @@ namespace bobo.entity
         public Nullable<System.DateTime> AddTime { get; set; }
 
         
-        public virtual ManagerRole ManagerRole { get; set; }
+        public  ManagerRole ManagerRole { get; set; }
     }
 }

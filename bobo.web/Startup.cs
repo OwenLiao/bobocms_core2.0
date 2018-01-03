@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using bobo.IService;
 using Autofac.Extensions.DependencyInjection;
-using AutofacContrib.DynamicProxy;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using bobo.orm.efcore;
@@ -20,7 +19,7 @@ using Microsoft.EntityFrameworkCore;
 using bobo.Service;
 using AutofacDemo.Codes;
 
-namespace BoboWeb
+namespace Bobo.Web
 {
     public class Startup
     {
@@ -29,7 +28,7 @@ namespace BoboWeb
 
         #region Autofac注册
 
-        public class AopInterceptor : IInterceptor
+     /*   public class AopInterceptor : IInterceptor
         {
             public void Intercept(IInvocation invocation)
             {
@@ -80,7 +79,7 @@ namespace BoboWeb
 
             return new AutofacServiceProvider(this.ApplicationContainer);
         }
-
+        */
         #endregion
 
 

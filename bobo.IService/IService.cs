@@ -17,7 +17,7 @@ namespace bobo.IService
         /// </summary>
         /// <param name="user_name">管理员用户名</param>
         /// <returns></returns>
-        List<SysChannel> GetMenu(string userName);
+        List<ManagerSysChannel> GetMenu(string userName);
 
     }
 
@@ -39,7 +39,7 @@ namespace bobo.IService
     }
     public interface IManagerRoleValueService : IBaseService<ManagerRoleValue> { }
     
-    public interface ISysChannelService : IBaseService<SysChannel> { }
+    public interface ISysChannelService : IBaseService<ManagerSysChannel> { }
 
 
 }

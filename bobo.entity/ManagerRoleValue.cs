@@ -41,6 +41,6 @@ namespace bobo.entity
         public virtual ManagerRole ManagerRole { get; set; }
      
         
-        public virtual SysChannel SysChannel { get; set; }
+        public virtual ManagerSysChannel SysChannel { get; set; }
     }
 }

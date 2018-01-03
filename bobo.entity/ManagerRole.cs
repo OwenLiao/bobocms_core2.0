@@ -26,11 +26,14 @@ namespace bobo.entity
 
         public string RoleName { get; set; }
 
+        public int IsDeleted { get; set; }
+
         /// <summary>
         ///
         /// </summary>
 
         public Nullable<int> RoleType { get; set; }
+     
         
         public virtual ICollection<Manager> Managers { get; set; }
 

@@ -4,12 +4,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using BoboWeb.Models;
+using Bobo.Web.Models;
 using bobo.IService;
 using bobo.entity;
 using AutofacDemo.Codes;
 
-namespace BoboWeb.Controllers
+namespace Bobo.Web.Controllers
 {
 
     public class HomeController : Controller

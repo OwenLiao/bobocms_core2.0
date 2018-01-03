@@ -7,9 +7,9 @@
   <ItemGroup>
     <PackageReference Include="autofac" Version="4.6.2" />
     <PackageReference Include="Autofac.AspNetCore.Multitenant" Version="1.0.0" />
-    <PackageReference Include="AutofacContrib.DynamicProxy" Version="2.3.2.632" />
     <PackageReference Include="Castle.Core" Version="4.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,7 +7,7 @@ using bobo.IService;
 
 namespace bobo.Service
 {
-    public class SysChannelService : BaseService<SysChannel>, ISysChannelService
+    public class SysChannelService : BaseService<ManagerSysChannel>, ISysChannelService
     {
 
     }

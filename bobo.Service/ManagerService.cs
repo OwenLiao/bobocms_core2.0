@@ -36,10 +36,10 @@ namespace bobo.Service
         /// </summary>
         /// <param name="user_name">管理员用户名</param>
         /// <returns></returns>
-        public List<SysChannel> GetMenu(string userName)
+        public List<ManagerSysChannel> GetMenu(string userName)
         {
             var manager = GetModel(userName);
-            List<SysChannel> channels = new List<SysChannel>();
+            List<ManagerSysChannel> channels = new List<ManagerSysChannel>();
             // if (manager.ManagerRole.RoleType == 1)//超级管理员
 
 

@@ -7,9 +7,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace bobo.entity
 {
 
-    public partial class SysChannel
+    public partial class ManagerSysChannel
     {
-        public SysChannel()
+        public ManagerSysChannel()
         {
             this.ManagerRoleValues = new List<ManagerRoleValue>();
            // this.parentId = 0;
@@ -44,8 +44,8 @@ namespace bobo.entity
         [Display(Name = "上级频道")]
         public Nullable<int> parentId { get; set; }
 
-        public SysChannel Parent { get; set; }
-        public ICollection<SysChannel> Children { get; set; }
+        public ManagerSysChannel Parent { get; set; }
+        public ICollection<ManagerSysChannel> Children { get; set; }
 
         /// <summary>
         ///管理地址
@@ -58,6 +58,8 @@ namespace bobo.entity
         /// </summary>
 
         public string ImgUrl { get; set; }
+        public int IsDeleted { get; set; }
+
 
         /// <summary>
         ///
@@ -73,7 +75,7 @@ namespace bobo.entity
         public Nullable<int> SortId { get; set; }
 
 
-        public virtual ICollection<ManagerRoleValue> ManagerRoleValues { get; set; }
+        public ICollection<ManagerRoleValue> ManagerRoleValues { get; set; }
 
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace BoboWeb.Models
+namespace Bobo.Web.Models
 {
     public class ErrorViewModel
     {
